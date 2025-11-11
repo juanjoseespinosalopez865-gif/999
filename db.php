@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";  // por defecto en XAMPP
 $password = "";
-$dbname = "vsiadventure_db";
+$dbname = "vsi_adventure";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
