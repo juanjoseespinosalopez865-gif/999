@@ -1,0 +1,218 @@
+.form-container {
+    margin-top: 60px;
+    height: calc(100vh - 60px);
+    position: relative;
+    overflow: hidden;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.form-content {
+    width: 30%;
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 24px;
+    padding: 32px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
+.title {
+    text-align: left;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #111827;
+}
+
+.subtitle {
+    color: #000000;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #374151;
+}
+
+.input {
+    padding: 10px 12px;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #3B82F6;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #374151;
+}
+
+.checkbox {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+.forgot-password {
+    font-size: 14px;
+    color: #2563EB;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    color: #3B82F6;
+}
+
+.btn-sing-up {
+    padding: 10px;
+    background-color: #2F5233;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-bottom: 15px;
+}
+
+.btn-sing-up:hover {
+    background-color: #1F4020;
+}
+
+.or-divider {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.or-divider::before,
+.or-divider::after {
+    content: "";
+    /*Debe crear un elemento vacio (sin contenido) en esos lugares.*/
+    flex-grow: 1;
+    /*Esto hace que esos elementos vacIos crezcan y ocupen todo el espacio disponible a izquierda y derecha del textO*/
+    border-top: 1px solid #000000;
+}
+
+.or-divider span {
+    padding: 0 10px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #000000;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.btn-google,
+.btn-apple {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-google:hover,
+.btn-apple:hover {
+    background-color: #F9FAFB;
+}
+
+.button-icon {
+    height: 20px;
+}
+
+.sign-up-label {
+    text-align: center;
+    font-size: 14px;
+    color: #6B7280;
+}
+
+.sign-up-link {
+    color: #2563EB;
+    text-decoration: none;
+    margin-left: 4px;
+}
+
+.sign-up-link:hover {
+    text-decoration: underline;
+    color: #3B82F6;
+}
+
+@media (max-width: 1650px) {
+    .form-content {
+        width: 45%;
+    }
+
+}
+
+@media (max-width: 1025px) {
+    .form-content {
+        width: 60%;
+    }
+
+}
+
+@media (max-width: 930px) {
+    .form-content {
+        width: 80%;
+    }
+}
+
+@media (max-height: 750px) {
+    .form-container {
+        height: 135vh;
+    }
+
+    
+}

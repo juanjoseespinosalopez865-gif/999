@@ -1,0 +1,128 @@
+nav .nav-acerca-de {
+  color: #4682B4;
+  text-decoration: underline;
+}
+
+.about-container {
+  position: relative;
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+
+.about-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.about-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 50px;
+  text-align: center;
+}
+
+.intro-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.intro-header {
+  margin-bottom: 40px;
+}
+
+.intro-subtitle {
+  color: #3b82f6;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.intro-subtitle::before {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background-color: #3b82f6;
+  display: inline-block;
+}
+
+.intro-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 24px;
+  font-family: Georgia, serif;
+}
+
+.intro-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4b5563;
+  max-width: 800px;
+  margin-bottom: 40px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px;
+}
+
+.feature-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.feature-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #F7e7ce;
+  border-radius: 8px;
+  padding: 12px;
+  flex-shrink: 0;
+}
+
+.feature-icon i {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.feature-content {
+  flex-grow: 1;
+}
+
+.feature-text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #4b5563;
+  margin: 0;
+}
+
+.video-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}

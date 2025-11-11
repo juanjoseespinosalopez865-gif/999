@@ -1,0 +1,320 @@
+    
+nav .nav-contactos {
+    color: #4682B4;
+    text-decoration: underline;
+}
+
+.explore-container {
+    position: relative;
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.explore-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.explore-overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.explore-text {
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.branch-card{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    width: 350px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background:#f7e7ce;
+    bottom: 0;
+    margin: 20px 20px;
+    min-height: 650px;
+  }
+
+  .card-image {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+  }
+
+  .card-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover .card-image img {
+    transform: scale(1.1);
+}
+.price-tag{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #6CA6D8;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #000000;
+}
+.details-bar {
+    padding: 12px 40px;
+    background: rgba(180, 177, 177, 0.9);
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    gap: 25px;
+    font-size: 14px;
+    color: #000000;
+    box-sizing: border-box;
+  }
+
+  .card-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 400;
+    line-height: 30px;
+  }
+  .rating-container{
+    text-align: center;
+
+  }
+  .reseñas{
+    text-align: center;
+    color: #000000;
+    font-family: "Poppins", Sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .rating {
+    color: #ffd700;
+    margin: 10px 0;
+  }
+
+  .description {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: left;
+    padding: 10px;
+  }
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.exploremore-title{
+    font-size: 32px;
+    color: #4682B4;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.exploremore-subtitle{
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    
+}
+.line-decoration {
+    width: 180px;
+    height: 4px;
+    background-color: #4682B4;
+    margin: 0 auto 20px;
+}
+.description-subtitle{
+  font-size: 18px;
+  padding-bottom: 15px;
+}
+
+.activities-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.activity-card {
+  background: white;
+  padding: 20px;
+  box-shadow: 0px 2px 5px  rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+  margin: 10px;
+  width: 150px;
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 2.5rem;
+  color: #0088cc;
+  margin-bottom: 15px;
+}
+
+.activity-title {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.destinations {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+@media (max-width: 991px) {
+  .branch-card {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 25px 15px;
+  }
+
+  .explore-container {
+      height: 400px;
+  }
+
+  .explore-text {
+      font-size: 35px;
+  }
+
+  .card {
+      min-height: 580px;
+  }
+
+  .card-image {
+      height: 300px;
+  }
+}
+
+@media (max-width: 767px) {
+  .branch-card {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+  }
+
+  .explore-container {
+      height: 350px;
+  }
+
+  .explore-text {
+      font-size: 30px;
+  }
+
+  .card {
+      min-height: 550px;
+      max-width: 450px;
+  }
+
+  .details-bar {
+      padding: 8px 15px;
+      gap: 15px;
+      font-size: 13px;
+  }
+}
+
+@media (max-width: 575px) {
+  .explore-container {
+      height: 300px;
+  }
+
+  .explore-text {
+      font-size: 25px;
+  }
+
+  .card {
+      min-height: 520px;
+  }
+
+  .card-image {
+      height: 250px;
+  }
+
+  .details-bar {
+      padding: 6px 10px;
+      gap: 10px;
+      font-size: 12px;
+  }
+
+  .card-title {
+      font-size: 18px;
+      line-height: 26px;
+  }
+
+  .description {
+      font-size: 14px;
+      padding: 8px;
+  }
+}
+
+@media (max-width: 399px) {
+  .explore-container {
+      height: 250px;
+  }
+
+  .explore-text {
+      font-size: 20px;
+  }
+
+  .branch-card {
+      padding: 15px 10px;
+  }
+
+  .card {
+      min-height: 480px;
+  }
+
+  .card-image {
+      height: 200px;
+  }
+
+  .price-tag {
+      font-size: 12px;
+      padding: 3px 6px;
+  }
+
+  .details-bar {
+      font-size: 11px;
+  }
+
+  .card-title {
+      font-size: 16px;
+      line-height: 24px;
+  }
+
+  .reseñas {
+      font-size: 12px;
+  }
+}

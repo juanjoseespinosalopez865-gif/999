@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VSI Adventure | Paquetes de Viaje</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="navbar">
+        <h1 class="logo">🌎 VSI Adventure</h1>
+        <button id="carritoBtn" class="carrito-btn">🛒 Mi Paquete</button>
+    </header>
+
+    <main class="container">
+        <h2>¡Cotiza tu viaje personalizado!</h2>
+        <p>Completa los datos para crear o modificar tu paquete de viaje.</p>
+
+        <form action="carrito.php" method="POST" class="formulario">
+            <label>Nombre completo*</label>
+            <input type="text" name="nombre" required>
+
+            <label>Correo electrónico*</label>
+            <input type="email" name="correo" required>
+
+            <label>Teléfono de contacto*</label>
+            <input type="text" name="telefono" required>
+
+            <label>Destino del viaje*</label>
+            <select name="destino" required>
+                <option value="">Selecciona un destino</option>
+                <option value="Cartagena">Cartagena</option>
+                <option value="San Andrés">San Andrés</option>
+                <option value="Medellín">Medellín</option>
+                <option value="Santa Marta">Santa Marta</option>
+            </select>
+
+            <label>Fecha de ida*</label>
+            <input type="date" name="fecha_ida" required>
+
+            <label>Fecha de regreso*</label>
+            <input type="date" name="fecha_regreso" required>
+
+            <label>Número de pasajeros*</label>
+            <input type="number" name="pasajeros" min="1" required>
+
+            <label>Forma de pago*</label>
+            <select name="pago" required>
+                <option value="">Selecciona método de pago</option>
+                <option value="Tarjeta de crédito">Tarjeta de crédito</option>
+                <option value="Tarjeta débito">Tarjeta débito</option>
+                <option value="PayPal">PayPal</option>
+                <option value="Nequi/Daviplata">Nequi / Daviplata</option>
+                <option value="Transferencia bancaria">Transferencia bancaria</option>
+            </select>
+
+            <button type="submit" class="btn-enviar">Guardar paquete</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2025 VSI Adventure - Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>
+

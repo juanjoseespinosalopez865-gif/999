@@ -1,0 +1,9 @@
+CREATE DATABASE IF NOT EXISTS vsi_adventure;
+USE vsi_adventure;
+
+CREATE TABLE IF NOT EXISTS usuario (
+    ID_Usuario INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL,
+    gmail VARCHAR(255) NOT NULL UNIQUE,
+    contrasena VARCHAR(255) NOT NULL
+);
