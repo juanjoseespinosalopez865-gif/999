@@ -34,6 +34,7 @@ session_start();
                 <li><a href="Acerca_de.html">Acerca de</a></li>
                 <li><a href="recorrido.html">Recorrido</a></li>
                 <li><a href="contactos.html">Contactos</a></li>
+                <li><a href="cotizar.php">Cotizar</a></li>
             </ul>
             <div class="auth-links">
                 <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
