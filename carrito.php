@@ -2,24 +2,28 @@
 include('db.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nombre = $_POST['nombre_cliente'];
+    $nombre = $_POST['nombre'];
     $destino = $_POST['destino'];
-    $personas = $_POST['personas'];
-    $inicio = $_POST['fecha_inicio'];
-    $fin = $_POST['fecha_fin'];
-    $pago = $_POST['metodo_pago'];
-    $total = $_POST['total'];
+    $personas = $_POST['pasajeros'];
+    $inicio = $_POST['fecha_ida'];
+    $fin = $_POST['fecha_regreso'];
+    $pago = $_POST['pago'];
 
-    $sql = "INSERT INTO paquetes (nombre_cliente, destino, personas, fecha_inicio, fecha_fin, metodo_pago, total)
-            VALUES ('$nombre', '$destino', '$personas', '$inicio', '$fin', '$pago', '$total')";
+    // Usar sentencias preparadas para prevenir inyección SQL
+    $sql = "INSERT INTO paquetes (nombre_cliente, destino, personas, fecha_inicio, fecha_fin, metodo_pago)
+            VALUES (?, ?, ?, ?, ?, ?)";
 
-    if ($conn->query($sql) === TRUE) {
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ssisss", $nombre, $destino, $personas, $inicio, $fin, $pago);
+
+    if ($stmt->execute()) {
         echo "<h2>✅ Paquete guardado exitosamente</h2>";
         echo "<a href='index.php'>Volver al inicio</a>";
     } else {
-        echo "Error: " . $conn->error;
+        echo "Error: " . $stmt->error;
     }
 
+    $stmt->close();
     $conn->close();
 }
 ?>
